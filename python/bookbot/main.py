@@ -1,19 +1,15 @@
+from stats import get_num_words, count_char
+
 def get_book_text(PATH):
     with open(PATH) as f:
-        file_content = f.read()
+        return f.read()
 
-    return file_content
-
-def get_book_word_count(PATH):
-    word_list = []
-    with open(PATH) as f:
-        file_content = f.read()
-        word_list = file_content.split()
-
-    return len(word_list)
 
 def main():
-    print(f"Found {get_book_word_count('./books/frankenstein.txt')} total words")
-
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = get_num_words(text)
+    print(f'Found {num_words} total words')
+    print(count_char(text))
 
 main()
