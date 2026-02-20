@@ -1,16 +1,14 @@
-from stats import get_num_words, count_char, sort_dict
+from stats import (
+    get_num_words, 
+    count_char, 
+    sort_dict,
+)
 
 def get_book_text(PATH):
     with open(PATH) as f:
         return f.read()
 
-
-def main():
-    book_path = "books/frankenstein.txt"
-    text = get_book_text(book_path)
-    num_words = get_num_words(text)
-    char_dict = count_char(text)
-    
+def print_report(book_path, num_words, char_dict):
     print("============ BOOKBOT ============")
     print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")
@@ -18,8 +16,25 @@ def main():
     print("--------- Character Count -------")
 
     for item in sort_dict(char_dict):
-        print(item["char"],": ", item["num"], sep="")
+        if item["char"].isalpha():
+            print(item["char"],": ", item["num"], sep="")
     
     print("============= END ===============")
 
+
+
+def main():
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    num_words = get_num_words(text)
+    char_dict = count_char(text)
+    chars_sorted_list = sort_dict(char_dict)
+    
+    print_report(book_path, num_words, char_dict)
+
+
 main()
+
+
+
+

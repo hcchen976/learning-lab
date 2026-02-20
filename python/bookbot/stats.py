@@ -32,8 +32,7 @@ def sort_dict(char_dict: dict) -> list[dict]:
     sorted_list = []
 
     for char in char_dict:
-        if char.isalpha():
-            sorted_list.append({"char": char, "num": char_dict[char]})
+        sorted_list.append({"char": char, "num": char_dict[char]})
 
     sorted_list.sort(reverse=True, key=sort_on_num)
     return sorted_list
