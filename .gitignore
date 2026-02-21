@@ -1,0 +1,101 @@
+# =========================
+# Global OS / Editor junk
+# =========================
+
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Windows / WSL (Windows side artifacts)
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux / WSL
+*~
+.nfs*
+.fuse_hidden*
+.directory
+
+# Common editor/IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# Python
+# =========================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+.conda/
+.condarc
+pip-wheel-metadata/
+
+# Packaging / build
+build/
+dist/
+eggs/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.pyre/
+.ruff_cache/
+hypothesis/
+
+# Type checker / tooling caches
+.pytype/
+.pyright/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# =========================
+# Secrets / local config
+# =========================
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# =========================
+# WSL / cross-platform notes
+# =========================
+# If you use direnv:
+.direnv/
+# If you use Docker volumes locally:
+docker-data/
